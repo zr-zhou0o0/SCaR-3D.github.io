@@ -18,4 +18,13 @@ $(document).ready(function() {
 	
     bulmaSlider.attach();
 
+	// Coming soon handler for paper/code/arxiv
+	$('.coming-soon').on('click', function(e){
+		e.preventDefault();
+		// Optionally you can customize message based on data-type
+		let t = $(this).data('type');
+		let map = {paper:'Paper', code:'Code', arxiv:'arXiv'};
+		alert((map[t]||'Content') + ' coming soon');
+	});
+
 })
