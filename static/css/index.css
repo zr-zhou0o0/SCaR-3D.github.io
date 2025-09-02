@@ -134,23 +134,23 @@ body {
 }
 
 /* Larger image carousel adjustments */
-.carousel-wide .results-carousel {
-  max-width: 1400px; /* expand width beyond is-max-desktop */
+ .carousel-wide .results-carousel {
+  max-width: 1200px; /* narrowed width */
   margin: 0 auto;
-}
+ }
 
-.carousel-wide .results-carousel .item img {
+ .carousel-wide .results-carousel .item img {
   width: 100%;
-  height: 420px; /* increase height */
+  height: 460px; /* slightly higher */
   object-fit: cover;
   border-radius: 8px;
-}
+ }
 
-@media (min-width: 1600px) {
+ @media (min-width: 1600px) {
   .carousel-wide .results-carousel .item img {
-    height: 480px;
+    height: 520px; /* keep proportion on very wide screens */
   }
-}
+ }
 
 /* Reduce horizontal padding inside items so image is visually larger */
 .carousel-wide .results-carousel .item {
