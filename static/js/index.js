@@ -24,7 +24,8 @@ $(document).ready(function() {
 		// Optionally you can customize message based on data-type
 		let t = $(this).data('type');
 		let map = {paper:'Paper', code:'Code', arxiv:'arXiv'};
-		alert((map[t]||'Content') + ' coming soon');
+		// alert((map[t]||'Content') + ' coming soon');
+		alert('coming soon');
 	});
 
 })
