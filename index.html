@@ -126,24 +126,28 @@
 <!-- Teaser video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <h2 class="subtitle has-text-centered">
-      TL;DR: <strong>SCaR-3D</strong> is a 3D change modeling framework using multi-view voting-and-validation strategy for accurate change detection and high-fidelity reconstruction.
-    </h2>
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/Video_3.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-cente        <source src="static/videos/Video_3.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-         We propose SCaR-3D, a 3D scene change modeling framework that detects changes from dense-view pre-change images and sparse-view post-change images, while seamlessly reconstructing the post-change scene. 
-      </h2>
-      <br>
-  <img src="static/images/Teaser_v8.png" alt="SCaR-3D teaser: change detection and reconstruction overview">
-      <br>
+    <div class="columns is-centered">
+      <div class="column is-12">
+        <h2 class="subtitle has-text-centered">
+          TL;DR: <strong>SCaR-3D</strong> is a 3D change modeling framework using multi-view voting-and-validation strategy for accurate change detection and high-fidelity reconstruction.
+        </h2>
+        <div class="hero-body">
+          <div class="has-text-centered">
+            <video poster="" id="tree" autoplay controls muted loop style="width: 80%; max-width: 800px;">
+              <!-- Your video here -->
+              <source src="static/videos/Video_3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h2 class="subtitle has-text-centered">
+             We propose SCaR-3D, a 3D scene change modeling framework that detects changes from dense-view pre-change images and sparse-view post-change images, while seamlessly reconstructing the post-change scene. 
+          </h2>
+          <br>
+          <div class="has-text-centered">
+            <img src="static/images/Teaser_v8.png" alt="SCaR-3D teaser: change detection and reconstruction overview" style="width: 90%; max-width: 900px;">
+          </div>
+          <br>
+        </div>
+      </div>
     </div>
   </div>
     
@@ -309,9 +313,67 @@
 <!-- End GIF results -->
 
 
+<!-- Video Presentation -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-12">
+        <h2 class="title is-3">CCS3D Dataset</h2>
+        <h2 class="subtitle has-text-centered">
+          Dataset Overview
+        </h2>
+        
+        <!-- Four-grid video layout -->
+        <div class="columns is-multiline is-centered" style="margin-top: 2rem;">
+          <!-- Living Room Video -->
+          <div class="column is-6">
+            <div class="video-container">
+              <video poster="" autoplay controls muted loop style="width: 100%; border-radius: 8px;">
+                <source src="static/videos/livingroom_2.mp4" type="video/mp4">
+              </video>
+              <h3 class="subtitle is-5 has-text-centered" style="margin-top: 0.5rem;">Livingroom</h3>
+            </div>
+          </div>
+          
+          <!-- Bedroom Video -->
+          <div class="column is-6">
+            <div class="video-container">
+              <video poster="" autoplay controls muted loop style="width: 100%; border-radius: 8px;">
+                <source src="static/videos/bedroom.mp4" type="video/mp4">
+              </video>
+              <h3 class="subtitle is-5 has-text-centered" style="margin-top: 0.5rem;">Bedroom</h3>
+            </div>
+          </div>
+          
+          <!-- Desk Video -->
+          <div class="column is-6">
+            <div class="video-container">
+              <video poster="" autoplay controls muted loop style="width: 100%; border-radius: 8px;">
+                <source src="static/videos/desk.mp4" type="video/mp4">
+              </video>
+              <h3 class="subtitle is-5 has-text-centered" style="margin-top: 0.5rem;">Desk</h3>
+            </div>
+          </div>
+          
+          <!-- Bookcase Video -->
+          <div class="column is-6">
+            <div class="video-container">
+              <video poster="" autoplay controls muted loop style="width: 100%; border-radius: 8px;">
+                <source src="static/videos/bookcase.mp4" type="video/mp4">
+              </video>
+              <h3 class="subtitle is-5 has-text-centered" style="margin-top: 0.5rem;">Bookcase</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Video Presentation -->
 
 
-
+          <!-- The Controllable Change in 3D Scenes (CCS3D) dataset consists of four synthetic scenes—Desk, Bookcase, Livingroom, and Bedroom—created in Blender. Unlike existing datasets limited to tabletop settings and simple camera paths, CCS3D provides full-room environments with diverse objects and human-like navigation patterns. It also supports controlled experiments by varying object numbers and change types, offering flexibility that real-world datasets cannot easily provide. -->
+ 
 
 <!-- Youtube video -->
 <!-- <section class="hero is-small is-light">
