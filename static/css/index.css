@@ -135,16 +135,46 @@ body {
 
 /* Larger image carousel adjustments */
  .carousel-wide .results-carousel {
-  max-width: 1200px; /* narrowed width */
+  max-width: 1000px; /* narrowed width */
   margin: 0 auto;
  }
 
  .carousel-wide .results-carousel .item img {
-  width: 100%;
-  height: 460px; /* slightly higher */
-  object-fit: cover;
+  /* 不裁剪：使用最大宽高约束，保持比例 */
+  max-width: 100%;
+  max-height: 420px; /* 控制最大显示高度，可调 */
+  width: auto;  /* 让浏览器按图片本身比例决定 */
+  height: auto;
+  object-fit: contain; /* 冗余，确保即便将来固定盒子也不裁剪 */
   border-radius: 8px;
+  display: block;
  }
+
+/* 包裹图片的容器：固定高度，图片自身自适应并居中，caption 在容器外部独立 */
+.carousel-image-wrapper {
+  width: 100%;
+  height: 420px; /* 与上方 max-height 匹配 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff; /* 留白底色 */
+  overflow: hidden; /* 防止异常大图溢出 */
+  padding: 0; /* 确保不影响图片对齐 */
+  box-sizing: border-box;
+}
+
+/* 轮播 item 去掉对 caption 的 flex 影响，让 wrapper + caption 垂直排布 */
+.results-carousel .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.results-carousel .item h2.subtitle {
+  font-size: 1rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+}
 
  @media (min-width: 1600px) {
   .carousel-wide .results-carousel .item img {
@@ -153,8 +183,13 @@ body {
  }
 
 /* Reduce horizontal padding inside items so image is visually larger */
-.carousel-wide .results-carousel .item {
+ .carousel-wide .results-carousel .item {
   padding: 10px;
+  display: flex;               /* 让图片在固定高度盒子内居中 */
+  align-items: center;
+  justify-content: center;
+  min-height: 480px;           /* 统一每个 item 的盒子高度，避免不同尺寸跳动，可与 max-height 协调 */
+  background: #fff;            /* 留白区域底色 */
 }
 
 
